@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <script type="module" src="./scripts/script.js"></script>
+    <head>
+        <meta charset="UTF-8">
+        <link href="./styles/spline.css" rel="stylesheet">
+        <title>Визуализация табличных графиков сплайнами</title>
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    </head>
+    <body>
+        <header>
+            Визуализация интерполяции кубическими сплайнами
+        </header>
+        <main>
+            <div class="form">
+                <label>Число точек</label>
+                <input type="number" id="dots_number" name="dots_number" value=""><br />
+                <button class="add-col" id="add_col" onclick="add_dots()">Добавить точки</button>
+                <div class="dots" id="dots">
+                </div>
+                <div name="step" id="step">
+                    <label>Шаг</label>
+                    <input type="number" name="step_input" id="step_input" value=""><br />
+                </div>
+                <div id="control-btns">
+                    <button class="start" id="start" onclick="start()">Решить</button>
+                    <button id="clear_last" onclick="clear_last()">Удалить последний график</button>
+                </div>
+            </div>
+            <div id="tester"></div>
+        </main>
+        <footer>
+            Сырмакешев Дмитрий ИДМ-22-07
+        </footer>
+    </body>
+</html>
